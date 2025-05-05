@@ -565,8 +565,8 @@ class Interface(object):
         )
 
         index = self.data[
-            (self.data['eq7'] > 0.1)
-            & (abs(self.data['absolute_change']) > 1)
+            (self.data['eq7'] > 0.01)
+            & (abs(self.data['absolute_change']) > 0.1)
             & (self.data['soil_moisture'] != 0)
             & (abs(self.data['deriv1']) > self.data['eq8'])
             & ~np.isclose(abs(self.data['deriv1']), self.data['eq8'])
